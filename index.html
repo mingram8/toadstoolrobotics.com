@@ -5,26 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Toadstool Robotics</title>
 <meta name="description" content="Toadstool Robotics LLC designs and builds robotics and outdoor hardware in Maryland.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-24 -24 48 48'%3E%3Cg fill='none' stroke='%23d9a441' stroke-width='3' stroke-linejoin='round'%3E%3Cpolygon points='0,20 -17.321,10 -17.321,-10 0,-20 17.321,-10 17.321,10'/%3E%3Cpolygon points='-5.909,12.673 -13.93,1.219 -8.02,-11.454 5.909,-12.673 13.93,-1.219 8.02,11.454'/%3E%3C/g%3E%3C/svg%3E">
+<meta property="og:title" content="Toadstool Robotics">
+<meta property="og:description" content="Robotics and outdoor hardware, designed and built in Maryland.">
+<meta property="og:image" content="https://toadstoolrobotics.com/og.png">
+<link rel="icon" href="mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500&display=swap">
 <style>
   :root {
-    --ground: #f3f1ec;
-    --ink: #1b1f27;
-    --muted: #5d6270;
-    --glow: #b9822a;
-    --line: #d9d5cc;
+    --ground: #f4ebdd;
+    --ink: #1e2b24;
+    --muted: #5b6159;
+    --red: #c9432f;
+    --line: #ddd0bc;
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --ground: #10141c;
-      --ink: #ece8df;
-      --muted: #9aa0ad;
-      --glow: #e3b45c;
-      --line: #252b37;
+      --ground: #1c1a22;
+      --ink: #f4ebdd;
+      --muted: #a8a196;
+      --red: #e0573f;
+      --line: #322e39;
       color-scheme: dark;
     }
   }
@@ -43,38 +46,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 28px;
+    gap: 32px;
     width: 100%;
     max-width: 640px;
     margin: 0 auto;
   }
-  .mark { width: 76px; height: 76px; }
-  .mark polygon { fill: none; stroke: var(--glow); stroke-width: 2.4; stroke-linejoin: round; }
-  .mark .inner { stroke-width: 2; opacity: .85; }
-  h1 {
-    margin: 0;
-    font: 700 clamp(40px, 9vw, 72px)/1.02 "Bricolage Grotesque", system-ui, sans-serif;
-    letter-spacing: -0.02em;
-    text-wrap: balance;
-  }
-  p.lede { margin: 0; max-width: 34ch; font-size: clamp(18px, 2.6vw, 21px); color: var(--muted); }
+  h1 { margin: 0; line-height: 0; }
+  h1 img { display: block; width: 100%; max-width: 520px; height: auto; }
+  p.lede { margin: 0; max-width: 36ch; font-size: clamp(18px, 2.6vw, 21px); color: var(--muted); }
   .contact {
     display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline;
     padding-top: 22px; border-top: 1px solid var(--line);
   }
-  .label { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-  a { color: var(--ink); text-decoration-color: var(--glow); text-underline-offset: 4px; text-decoration-thickness: 2px; }
-  a:focus-visible { outline: 2px solid var(--glow); outline-offset: 3px; border-radius: 2px; }
+  .label { font: 500 12px/1 "IBM Plex Mono", ui-monospace, monospace; letter-spacing: .28em; text-transform: uppercase; color: var(--muted); }
+  a { color: var(--ink); text-decoration-color: var(--red); text-underline-offset: 4px; text-decoration-thickness: 2px; }
+  a:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-radius: 2px; }
   footer { max-width: 640px; width: 100%; margin: 40px auto 0; font-size: 13px; color: var(--muted); }
 </style>
 </head>
 <body>
 <main>
-  <svg class="mark" viewBox="-24 -24 48 48" role="img" aria-label="Toadstool Robotics hex mark">
-    <polygon points="0,20 -17.321,10 -17.321,-10 0,-20 17.321,-10 17.321,10"/>
-    <polygon class="inner" points="-5.909,12.673 -13.93,1.219 -8.02,-11.454 5.909,-12.673 13.93,-1.219 8.02,11.454"/>
-  </svg>
-  <h1>Toadstool Robotics</h1>
+  <h1>
+    <picture>
+      <source srcset="logo-dark.svg" media="(prefers-color-scheme: dark)">
+      <img src="logo.svg" alt="Toadstool Robotics" width="1043" height="306">
+    </picture>
+  </h1>
   <p class="lede">Robotics and outdoor hardware, designed and built in Maryland. Something is on the bench &mdash; more soon.</p>
   <div class="contact">
     <span class="label">Contact</span>
